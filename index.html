@@ -7,16 +7,22 @@
         <link href="/index.css" type="text/css" rel="stylesheet" />
     </head>
     <body class="container pt-2">
-        <input class="form-control mb-3" type="text" />
+        <input id="txt_numeros" class="form-control mb-3" type="text" value="0" />
         <div class="row mb-1">
             <div class="col">
-                <button type="button" class="btn btn-primary">7</button>
+                <button type="button" 
+                        class="btn btn-primary" 
+                        onclick="numeroOnClick(7)">7</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-primary">8</button>
+                <button type="button" 
+                        class="btn btn-primary"
+                        onclick="numeroOnClick(8)">8</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-primary">9</button>
+                <button type="button" 
+                        class="btn btn-primary"
+                        onclick="numeroOnClick(9)">9</button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-primary">+</button>

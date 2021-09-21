@@ -104,11 +104,25 @@ const crearDivFilaBotones = (numFila) => {
 }
 
 const crearUltimaFila = () => {
+    const etiquetas = ["C", "0", "=", "/"]
     var div = document.createElement("div")
     div.setAttribute("class", "row mb-1")
 
-    var divCol = document.createElement("div")
-    divCol.setAttribute("class", "col")
+    for (var etiqueta of etiquetas) {
+        var divCol = document.createElement("div")
+        divCol.setAttribute("class", "col")
+    
+        var but = document.createElement("button")
+        but.setAttribute("id", "but" + etiqueta)
+        but.setAttribute("class", "btn btn-primary")
+        but.setAttribute("type", "button")
+        but.innerText = etiqueta
+
+        divCol.appendChild(but)
+        div.appendChild(divCol)
+    }
+
+    return div
 }
 
 const construirCalculadora = () => {
@@ -125,6 +139,7 @@ const construirCalculadora = () => {
     document.body.appendChild(divFila);
 
     divFila = crearUltimaFila()
+    document.body.appendChild(divFila);
 }
 
 
